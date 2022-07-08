@@ -24,7 +24,7 @@ async def process_start_command(message: types.Message):
     #driver = webdriver.Firefox(options=options, executable_path=r"geckodriver.exe") #прога для запуска firefoxа
     options.binary_location = os.environ.get('GOOGLE_CHROME_SHIM', None)
     driver = webdriver.Chrome(options=options, executable_path="chromedriver") #прога для запуска chromа
-    driver.get('https://csgorun.gg') #запуск сайта
+    driver.get('https://csgorun.run') #запуск сайта
     last_game = '' #последний кф
     driver.find_element_by_class_name("switcher__content").click() #нажимаем на подтверждение 18 лет
     while True: #бесконечный цикл
